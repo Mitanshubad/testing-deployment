@@ -1139,10 +1139,10 @@ When a vulnerable dependency has a patched version available, automatically crea
   steps:
     - run: npm audit fix
     - run: |
-        git checkout -b security/fix-${{ vulnerability.id }}
-        git commit -am "fix: update ${{ vulnerability.package }} to ${{ vulnerability.fixed_version }}"
-        gh pr create --title "Security: Fix ${{ vulnerability.id }}" \\
-          --body "Automated fix for ${{ vulnerability.title }}"
+            git checkout -b security/fix-\${{ vulnerability.id }}
+            git commit -am "fix: update \${{ vulnerability.package }} to \${{ vulnerability.fixed_version }}"
+            gh pr create --title "Security: Fix \${{ vulnerability.id }}" \\
+              --body "Automated fix for \${{ vulnerability.title }}"
 \`\`\`
 
 ## Principle 4: Guardrails, Not Gates
